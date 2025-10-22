@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main() {
+ char STR[200], PAT[50], REP[50];
+ int i;
+ // Read main string
+ printf("Enter Main String (STR): ");
+ fgets(STR, sizeof(STR), stdin);
+ // Read pattern string
+ printf("Enter Pattern String (PAT): ");
+ fgets(PAT, sizeof(PAT), stdin);
+ // Read replace string
+ printf("Enter Replace String (REP): ");
+ fgets(REP, sizeof(REP), stdin);
+ // Remove newline characters manually (since no built-in string functions allowed)
+ for (i = 0; STR[i] != '\0'; i++)
+ if (STR[i] == '\n') STR[i] = '\0';
+ for (i = 0; PAT[i] != '\0'; i++)
+ if (PAT[i] == '\n') PAT[i] = '\0';
+ for (i = 0; REP[i] != '\0'; i++)
+ if (REP[i] == '\n') REP[i] = '\0';
+ // Display the entered strings
+ printf("\nMain String (STR): %s", STR);
+ printf("\nPattern String (PAT): %s", PAT);
+ printf("\nReplace String (REP): %s\n", REP);
+ return 0;
+}
