@@ -1,0 +1,18 @@
+#include<stdio.h>
+int sumofn(int n);
+int sumofn(int n){
+if(n==0){
+return 0;
+}
+else{
+return n+ sumofn(n-1);
+}
+}
+int main(){
+int n;
+printf("enter n:");
+scanf("%d",&n);
+int result=sumofn(n);
+printf("sum of first %d number is = %d\n",n,result);
+return 0;
+}
